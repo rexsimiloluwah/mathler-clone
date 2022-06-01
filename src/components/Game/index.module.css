@@ -1,0 +1,41 @@
+@import "../../styles/globals.css"; 
+
+.game{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.endgame__grid{
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    /* max-width: 200px; */
+    margin: .5rem auto;
+}
+
+.endgame__grid .row{
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: .1rem auto;
+}
+
+.endgame__grid .row span{
+    display: contents;
+}
+
+.copy__grid{
+    padding: 1rem;
+    border: 2px solid var(--light-gray);
+    outline: none;
+    box-shadow: none; 
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.copy__grid:hover{
+    border-color: var(--primary-green);
+}
