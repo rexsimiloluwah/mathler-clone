@@ -1,23 +1,23 @@
-@import "../../styles/globals.css";
+@import '../../styles/globals.css';
 
-.header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    align-content: center;
-    padding: 0rem 2rem;
-    border-bottom: 1px solid var(--light-gray); 
-    margin-bottom: .5rem;
+.header {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ align-content: center;
+ padding: 0rem 2rem;
+ border-bottom: 1px solid var(--light-gray);
+ margin-bottom: 0.5rem;
 }
 
-.header svg{
-    cursor: pointer;
+.header svg {
+ cursor: pointer;
 }
 
-.header.easy h1 small{
-    color: dodgerblue;
+.header.easy h1 small {
+ color: dodgerblue;
 }
 
-.header.hard h1 small{
-    color: crimson;
+.header.hard h1 small {
+ color: crimson;
 }

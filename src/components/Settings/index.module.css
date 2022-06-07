@@ -1,25 +1,25 @@
-.difficulty{
-    padding: 1rem;
-    margin: .5rem auto;
-    color: #fff;
-    border-radius: 15px;
-    cursor: pointer;
-    opacity: .9;
+.difficulty {
+ padding: 1rem;
+ margin: 0.5rem auto;
+ color: #fff;
+ border-radius: 15px;
+ cursor: pointer;
+ opacity: 0.9;
 }
 
-.difficulty h4{
-    margin: 0 !important;
+.difficulty h4 {
+ margin: 0 !important;
 }
 
-.difficulty:hover{
-    opacity: 1;
-    transform: scale(1.02);
+.difficulty:hover {
+ opacity: 1;
+ transform: scale(1.02);
 }
 
-.difficulty.easy{
-    background: dodgerblue; 
+.difficulty.easy {
+ background: dodgerblue;
 }
 
-.difficulty.hard{
-    background: crimson;
+.difficulty.hard {
+ background: crimson;
 }

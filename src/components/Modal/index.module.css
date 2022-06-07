@@ -1,40 +1,40 @@
 .modal {
-    position: fixed;
-    border-radius: 10px;
-    background: white;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-    left: 50%;
-    padding: 1rem;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 30%;
-    z-index: 100;
+ position: fixed;
+ border-radius: 10px;
+ background: white;
+ box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+ left: 50%;
+ padding: 1rem;
+ top: 50%;
+ transform: translate(-50%, -50%);
+ min-width: 30%;
+ z-index: 100;
 }
 
-.modal svg{
-    position: absolute;
-    right: 5%;
-    stroke-width: 10;
-    border: 2px solid black;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.modal__content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 0.5rem 0.5rem;
-    margin: 0;
+.modal svg {
+ position: absolute;
+ right: 5%;
+ stroke-width: 10;
+ border: 2px solid black;
+ border-radius: 50%;
+ cursor: pointer;
 }
 
 .modal__content {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+ padding: 0.5rem 0.5rem;
+ margin: 0;
 }
 
-@media (max-width : 768px){
-    .modal{
-        padding: 1.5rem;
-        width: 80%;
-    }
+.modal__content {
+}
+
+@media (max-width: 768px) {
+ .modal {
+  padding: 1.5rem;
+  width: 80%;
+ }
 }

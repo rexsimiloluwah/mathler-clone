@@ -19,8 +19,6 @@ type Error = {
  color: string
 }
 
-console.log('messy code')
-
 export type Guess = Array<IGuessChar>
 
 /**
@@ -191,6 +189,13 @@ const useMathler = (solution: string, size: number) => {
   setError(null)
  }
 
+ const clearGuesses = () => {
+  setGuesses([...Array(NUM_TRIALS)])
+  setHistory([])
+  setTrial(0)
+  setUsedKeys(new Map<string, string>())
+ }
+
  return {
   trial,
   currentGuess,
@@ -205,6 +210,7 @@ const useMathler = (solution: string, size: number) => {
   error,
   clearError,
   handleKeyboardEvent,
+  clearGuesses,
  }
 }
 
