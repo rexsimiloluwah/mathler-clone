@@ -20,6 +20,7 @@ const Settings:React.FC<ISettingsProps> = ({closeSettings}) => {
         closeSettings();
         // console.log("Difficulty changed.")
     }
+
     return(
         <div>
             <h3>Select Difficulty</h3>
@@ -32,7 +33,7 @@ const Settings:React.FC<ISettingsProps> = ({closeSettings}) => {
                 ))
             }
 
-            <h4>Created by El Tigre ❤️️.</h4>
+            <h4>Created by Similoluwa Okunowo ❤️️.</h4>
             <p>Kindly play the <a href="https://mathler.com">Original Mathler</a> for a better experience.</p>
         </div>
     )

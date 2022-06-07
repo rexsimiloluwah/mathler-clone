@@ -26,11 +26,10 @@
     align-items: center;
     flex-direction: column;
     padding: 0.5rem 0.5rem;
+    margin: 0;
 }
 
-.modal__content h2{
-    line-height: 1.2rem;
-    margin: 0;
+.modal__content {
 }
 
 @media (max-width : 768px){

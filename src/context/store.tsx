@@ -1,35 +1,29 @@
-import { IDifficulty, DIFFICULTY } from "../constants";
-import React, { createContext, useReducer } from "react";
-import { gameReducer } from "./reducer";
+import { IDifficulty, DIFFICULTY } from '../constants'
+import React, { createContext, useReducer } from 'react'
+import { gameReducer } from './reducer'
 
 export type InitialStateType = {
-    difficulty: IDifficulty;
+ difficulty: IDifficulty
 }
 
-export interface IAppProviderProps{
-    children?: React.ReactNode;
+export interface IAppProviderProps {
+ children?: React.ReactNode
 }
 
 const initialState = {
-    difficulty: DIFFICULTY[0],
+ difficulty: DIFFICULTY[0],
 }
 
 export const AppContext = createContext<{
-    state: InitialStateType,
-    dispatch: React.Dispatch<any>,
+ state: InitialStateType
+ dispatch: React.Dispatch<any>
 }>({
-    state: initialState,
-    dispatch: () => null,
+ state: initialState,
+ dispatch: () => null,
 })
 
+export const AppProvider: React.FC<IAppProviderProps> = ({ children }) => {
+ const [state, dispatch] = useReducer(gameReducer, initialState)
 
-export const AppProvider:React.FC<IAppProviderProps> = ({children}) => {
-    const [state,dispatch] = useReducer(gameReducer,initialState);
-
-    return (
-        <AppContext.Provider value={{state,dispatch}}>
-            {children}
-        </AppContext.Provider>
-    )
+ return <AppContext.Provider value={{ state, dispatch }}>{children}</AppContext.Provider>
 }
-

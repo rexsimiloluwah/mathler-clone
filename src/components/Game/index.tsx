@@ -70,8 +70,9 @@ const Game:React.FC<IGameProps> = ({solution}) => {
             <Grid trial={trial} currentGuess={currentGuess} guesses={guesses} size={state.difficulty.squaresCount}/>
             <Keyboard usedKeys={usedKeys} handleKeyboardEvent={handleKeyboardEvent}/>
             <Modal isOpen={showModal} toggleModal={handleToggleModal}>
-                <h2 style={{textAlign:"center"}}>{isCorrect?"You Win 🎉":"You Lose 😑"}</h2>
-                <p>{trial} / {NUM_TRIALS}</p>
+                <h2 style={{textAlign:"center"}}>({trial}/{NUM_TRIALS}) {isCorrect?"You Win 🎉":"You Lose 😑"}</h2>
+                {isCorrect?"":<p>SOLUTION: {solution}</p>}
+                {/* <p></p> */}
                 <div className = {style.endgame__grid} id="share">
                     {
                         guesses.map((guess,i) => (
