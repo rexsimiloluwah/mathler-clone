@@ -8,36 +8,48 @@
  margin: 1rem auto;
 }
 
-.keyboard > div {
+.keyboard > button{
  display: flex;
  align-items: center;
  justify-content: center;
  background: var(--light-gray);
- width: 50px;
- height: 35px;
- padding: 0.2rem;
+ width: 60px;
+ height: 40px;
+ padding: 1rem;
  margin: 0.2rem;
  border-radius: 6px;
- font-weight: bold;
  cursor: pointer;
  opacity: 0.9;
+ outline: none;
+ border: none;
 }
 
-.keyboard > div:hover {
+.keyboard > button span{
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.keyboard > button:hover {
  opacity: 1;
 }
 
-.keyboard > div.gray {
+.keyboard > button.gray {
  background: var(--primary-gray);
  color: white;
 }
 
-.keyboard > div.yellow {
+.keyboard > button.yellow {
  background: var(--primary-yellow);
  color: white;
 }
 
-.keyboard > div.green {
+.keyboard > button.green {
  background: var(--primary-green);
  color: white;
+}
+
+.keyboard > .listen_button{
+    background: dodgerblue;
+    color: #FFF;
+    font-size: 18px;
 }

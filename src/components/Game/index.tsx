@@ -25,8 +25,14 @@ const Game: React.FC<IGameProps> = ({ solution }) => {
   usedKeys,
   NUM_TRIALS,
   error,
+  clearGuesses,
   clearError,
  } = useMathler(solution, state.difficulty.squaresCount)
+
+ useEffect(() => {
+  clearGuesses()
+ }, [state.difficulty.squaresCount])
+
  useEffect(() => {
   // add event listener to the window when the component loads
   window.addEventListener('keyup', handleKeyUp)

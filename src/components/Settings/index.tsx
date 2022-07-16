@@ -3,7 +3,6 @@ import React, { useContext } from 'react'
 import { DIFFICULTY, IDifficulty } from '../../constants'
 import { GameTypes } from '../../context/reducer'
 import { AppContext } from '../../context/store'
-
 import style from './index.module.css'
 
 export interface ISettingsProps {
