@@ -31,21 +31,27 @@ const Keyboard: React.FC<IKeyboardProps> = ({ usedKeys, handleKeyboardEvent }) =
  }
  useEffect(() => {
   if (transcript !== '') {
-   console.log('Got final result:', transcript)
+   // console.log('Got final result:', transcript)
+   // extract the last word from the speech transcript
    let lastWord = transcript.split(' ')[transcript.split(' ').length - 1].toLowerCase()
+   // Handle the keyboard event to enter the last word if it is a digit or valid mathematical operator
    if (/^[0-9)(*/^+-]$/.test(lastWord)) {
     handleKeyboardEvent(lastWord)
     resetTranscript()
    }
+   // use the last word as an index to retrieve the input from the "transcribeKeys" dictionary
+   // Handle the keyboard event to enter the result if it is a digit or valid mathematical operator
    if (/^[0-9)(*/^+-]$/.test(transcribeKeys[lastWord])) {
     handleKeyboardEvent(transcribeKeys[lastWord])
     resetTranscript()
    }
-   if (lastWord.toLowerCase() === 'enter' || lastWord.toLowerCase().indexOf('end') !== -1) {
+   // Handling a special edge case for "Enter"
+   if (lastWord.toLowerCase() === 'enter' || lastWord.toLowerCase().indexOf('en') !== -1) {
     handleKeyboardEvent('Enter')
     resetTranscript()
    }
-
+   // check if the last word matches "back" or "clear"
+   // Handle the "Backspace" keyboard event to clear an entered character if true
    if (
     (lastWord.toLowerCase().indexOf('back') !== -1 &&
      transcript.toLowerCase().indexOf('bracket') === -1) ||
@@ -55,12 +61,14 @@ const Keyboard: React.FC<IKeyboardProps> = ({ usedKeys, handleKeyboardEvent }) =
     handleKeyboardEvent('Backspace')
     resetTranscript()
    }
-
+   // check if the transcript contains "open" and "bracket"
+   // Handle the keyboard event to enter "(" if true
    if (transcript.indexOf('open') !== -1 && transcript.indexOf('bracket') !== -1) {
     handleKeyboardEvent('(')
     resetTranscript()
    }
-
+   // check if the transcript contains "close" and "bracket"
+   // Handle the keyboard event to enter ")" if true
    if (transcript.indexOf('close') !== -1 && transcript.indexOf('bracket') !== -1) {
     handleKeyboardEvent(')')
     resetTranscript()
