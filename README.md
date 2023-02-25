@@ -1,3 +1,6 @@
+# MATHLER CLONE 
+[Mathler](https://www.mathler.com/) is a mathematical "spin-off" of the popular Wordle game. This clone includes the standard features of the game, unlimited trials, and an additional option of playing with your voice via real-time speech recognition in your browser.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
